@@ -1,0 +1,126 @@
+@import url(http://fonts.googleapis.com/css?family=Raleway:500);
+
+body {
+    margin: 0;
+}
+
+#judge-banner-wrap {
+    position: relative;
+}
+
+#judge-global-banner, #judge-global-banner * {
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+}
+
+#judge-global-banner {
+    font-family: 'Raleway', Helvetica, Arial, sans-serif;
+    padding: 5px;
+    background-color: #363636;
+    z-index: 99999;
+    font-size: 14px;
+    position: relative;
+    height: 45px;
+}
+
+#judge-global-banner #judge-global-logo {
+    height: 45px;
+}
+
+#judge-global-banner #judge-global-menu {
+    list-style: none outside none;
+    display: inline-block;
+    margin: 14px 0;
+}
+
+#judge-global-banner .nav-item {
+    background: url("divider.png") no-repeat scroll right center transparent;
+    display: block;
+    float: left;
+    margin-right: 24px;
+    padding-right: 24px;
+    position: relative;
+    width: 40px;
+    height: 16px;
+}
+
+#judge-global-banner .nav-item a, .nav-item span {
+    color: white;
+    text-decoration: none;
+}
+
+#judge-global-banner .nav-item > a, .nav-item span {
+    padding-bottom: 18px;
+    line-height: 14px;
+}
+
+#judge-global-banner .nav-item.current a, #judge-global-banner .current, #judge-global-banner .nav-item.current:hover a {
+    color: darkorange;
+    font-weight: bold;
+}
+
+#judge-global-banner .nav-item:hover > a {
+    color: white;
+    border-bottom: 3px solid darkorange;
+}
+
+#judge-global-banner .nav-item > ul {
+    display: none;
+    list-style: none outside none;
+    margin: 0;
+    padding: 15px 0 0 0;
+    position: relative;
+    right: 25px;
+}
+
+#judge-global-banner .nav-item:hover > ul {
+    display: inline-block;
+}
+
+#judge-global-banner .nav-item:hover > ul > li {
+    display: block;
+    width: 90px;
+    padding: 15px;
+    margin: 0;
+    background-color: #363636;
+}
+
+#judge-global-banner .sub-nav-item:hover > a {
+    border-bottom: 3px solid darkorange;
+}
+
+#judge-global-banner .search {
+    display: inline-block;
+    position: relative;
+    left: -8px;
+    top: -10px;
+}
+
+#search-icon {
+    height: 28px;
+    width: 28px;
+    display: inline-block;
+    background: url("search.svg");
+    cursor: pointer;
+}
+
+#search-icon:hover {
+    background: url("search-hover.svg");
+}
+
+#search-form {
+    display: inline-block;
+    position: relative;
+    top: -7px;
+    left: 5px;
+}
+
+#judge-global-banner .search input {
+    height: 20px;
+    width: 150px;
+    padding: 5px 15px;
+    border-radius: 15px;
+    border: 1px black solid;
+    outline: none;
+}
