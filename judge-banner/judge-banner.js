@@ -1,4 +1,4 @@
-jQuery.get('http://assets.aleaiactaest.ch/judge-banner/judge-banner.html', function (data) {
+jQuery.get('http://assets.magicjudges.org/judge-banner/judge-banner.html', function (data) {
 	jQuery().ready(function () {
 
 		jQuery('body').prepend(data);
