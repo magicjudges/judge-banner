@@ -8,6 +8,8 @@ jQuery.get('http://assets.magicjudges.org/judge-banner/judge-banner.html', funct
 			elem = jQuery('#nav-apps');
 		} else if (hostname.indexOf('wiki') != -1) {
 			elem = jQuery('#nav-wiki');
+		} else if (window.location.href.indexOf('/o/') != -1) {
+			jQuery('#o-resources').addClass('current');
 		} else if (hostname.indexOf('blogs') != -1) {
 			jQuery('#nav-blogs').addClass('current');
 		} else if (hostname.indexOf('chat') != -1) {
@@ -16,7 +18,7 @@ jQuery.get('http://assets.magicjudges.org/judge-banner/judge-banner.html', funct
 
 		if (elem) {
 			elem.addClass('current');
-			text = elem.text();
+			var text = elem.text();
 			elem.find('a').remove();
 			elem.html(text);
 		}

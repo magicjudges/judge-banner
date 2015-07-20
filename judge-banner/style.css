@@ -8,6 +8,11 @@ body {
     position: relative;
 }
 
+/* fix for wiki */
+#p-logo {
+    top: 50px;
+}
+
 #judge-global-banner, #judge-global-banner * {
     -webkit-box-sizing: content-box;
     -moz-box-sizing: content-box;
@@ -26,11 +31,13 @@ body {
 
 #judge-global-banner #judge-global-logo {
     height: 45px;
+    vertical-align: baseline;
 }
 
 #judge-global-banner #judge-global-menu {
-    list-style: none outside none;
     display: inline-block;
+    line-height: 18px;
+    list-style: none outside none;
     margin: 14px 10px;
 }
 
@@ -45,8 +52,10 @@ body {
     height: 16px;
 }
 
-#judge-global-banner .nav-item a, .nav-item span {
+#judge-global-banner .nav-item a,
+#judge-global-banner .nav-item span {
     color: white;
+    font-weight: normal;
     text-decoration: none;
 }
 
@@ -55,14 +64,15 @@ body {
     line-height: 14px;
 }
 
-#judge-global-banner .nav-item.current a, #judge-global-banner .current, #judge-global-banner .nav-item.current:hover a {
-    color: darkorange;
-    font-weight: bold;
-}
-
 #judge-global-banner .nav-item:hover > a {
     color: white;
     border-bottom: 3px solid darkorange;
+}
+
+#judge-global-banner .nav-item .current,
+#judge-global-banner .nav-item:hover .current {
+    color: darkorange;
+    font-weight: bold;
 }
 
 #judge-global-banner .nav-item > ul {
