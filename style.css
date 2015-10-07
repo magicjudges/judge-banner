@@ -1,0 +1,119 @@
+@import url(http://fonts.googleapis.com/css?family=Raleway:500);
+body {
+  margin: 0;
+}
+#judge-global-banner, #judge-global-banner * {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+@media(min-width: 34em) {
+  #judge-navbar-toggler {
+    display: none;
+  }
+}
+@media(max-width: 34em) {
+  #judge-global-menu, #judge-global-search {
+    display: none;
+  }
+}
+#judge-navbar-toggler {
+  color: white;
+  font-size: 25px;
+  margin-left: 10px;
+}
+#judge-global-banner {
+  background-color: #363636;
+  display: flex;
+  font-family: 'Raleway', Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  height: 45px;
+  padding: 5px;
+  z-index: 99999;
+}
+#judge-global-logo {
+  height: 45px;
+}
+#judge-global-menu {
+  margin: 14px 10px;
+}
+#judge-global-menu .nav-item {
+  background: url("divider.png") no-repeat scroll right center transparent;
+  display: block;
+  float: left;
+  margin-right: 24px;
+  padding-right: 24px;
+  position: relative;
+  width: 40px;
+  height: 16px;
+}
+#judge-global-menu .nav-item a, #judge-global-menu .nav-item span {
+  color: white;
+  font-weight: normal;
+  text-decoration: none;
+}
+#judge-global-menu .nav-item > a, .nav-item span {
+  padding-bottom: 18px;
+  line-height: 14px;
+}
+#judge-global-menu .nav-item:hover > a {
+  color: white;
+  border-bottom: 3px solid darkorange;
+}
+#judge-global-menu .nav-item .current, #judge-global-menu .nav-item:hover .current {
+  color: darkorange;
+  font-weight: bold;
+}
+#judge-global-menu .nav-item > ul {
+  display: none;
+  list-style: none outside none;
+  margin: 0;
+  padding: 15px 0 0 0;
+  position: relative;
+  right: 25px;
+}
+#judge-global-menu .nav-item:hover > ul {
+  display: inline-block;
+}
+#judge-global-menu .nav-item:hover > ul > li {
+  display: block;
+  width: 90px;
+  padding: 15px;
+  margin: 0;
+  background-color: #363636;
+}
+#judge-global-menu .sub-nav-item:hover > a {
+  border-bottom: 3px solid darkorange;
+}
+#judge-global-menu .search {
+  display: inline-block;
+  position: relative;
+  left: -8px;
+  top: -10px;
+}
+#judge-global-search {
+  margin: 7px;
+}
+#search-icon {
+    height: 28px;
+    width: 28px;
+    display: inline-block;
+    background: url("search.svg");
+    cursor: pointer;
+}
+#search-icon:hover {
+    background: url("search-hover.svg");
+}
+#judge-global-search form {
+  bottom: 6px;
+  display: inline-block;
+  position: relative;
+}
+#judge-global-search input {
+  height: 20px;
+  width: 150px;
+  padding: 5px 15px;
+  border-radius: 15px;
+  border: 1px black solid;
+  outline: none;
+}
