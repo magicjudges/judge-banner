@@ -1,0 +1,44 @@
+@import 'style';
+#judge-global-menu {
+  display: inline-block;
+  .nav-item {
+    color: white;
+    display: block;
+    float: left;
+    height: 20px;
+    margin-right: 20px;
+    padding: 15px;
+    width: 80px;
+    a {
+      padding-bottom: 22px;
+    }
+    ul {
+      background-color: $bg-color;
+      display: none;
+      padding-top: 15px;
+      position: relative;
+      right: 40px;
+      .nav-item {
+        float: none;
+        width: 100px;
+        a {
+          padding-bottom: 13px;
+        }
+      }
+    }
+    &:hover {
+      &> a {
+        border-bottom: 3px solid $highlight;
+      }
+      ul {
+        display: inline-block;
+      }
+    }
+  }
+}
+#judge-global-banner-collapse {
+  display: none;
+}
+#judge-global-search {
+  left: 750px;
+}

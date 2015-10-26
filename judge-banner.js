@@ -1,26 +1,23 @@
-jQuery.get('http://assets.magicjudges.org/judge-banner/judge-banner.html', function (data) {
-	jQuery().ready(function () {
+var url = "http://assets.magicjudges.org/judge-banner/judge-banner.html";
+var xhr = new XMLHttpRequest();
 
-		jQuery('body').prepend(data);
-		var hostname = window.location.hostname;
-		var elem;
-		if (hostname.indexOf('apps') != -1) {
-			elem = jQuery('#nav-apps');
-		} else if (hostname.indexOf('wiki') != -1) {
-			elem = jQuery('#nav-wiki');
-		} else if (window.location.href.indexOf('/o/') != -1) {
-			jQuery('#o-resources').addClass('current');
-		} else if (hostname.indexOf('blogs') != -1) {
-			jQuery('#nav-blogs').addClass('current');
-		} else if (hostname.indexOf('chat') != -1) {
-			elem = jQuery('#nav-irc');
-		}
+xhr.addEventListener("load", function() {
+  var html = document.createElement("div");
+  html.innerHTML = this.response;
+  document.body.insertBefore(html, document.body.firstChild);
 
-		if (elem) {
-			elem.addClass('current');
-			var text = elem.text();
-			elem.find('a').remove();
-			elem.html(text);
-		}
-	});
+  var scripts = html.getElementsByTagName("script");
+  for (var i = 0; i < scripts.length; i++) {
+    if (scripts[i].src != "") {
+      var tag = document.createElement("script");
+      tag.src = scripts[i].src;
+      document.getElementsByTagName("head")[0].appendChild(tag);
+    } else {
+      eval(scripts[i].innerHTML);
+    }
+  }
 });
+
+xhr.open("GET", url);
+xhr.setRequestHeader("Content-type", "text/html");
+xhr.send();

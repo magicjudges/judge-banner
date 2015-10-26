@@ -1,0 +1,70 @@
+@import 'style';
+#judge-global-banner.collapsed {
+  #judge-global-menu {
+    display: none;
+  }
+  #judge-global-banner-collapse span {
+    background-color: white;
+  }
+}
+#judge-global-menu {
+  background-color: $bg-color;
+  display: block;
+  .nav-item {
+    color: white;
+    display: block;
+    height: 20px;
+    margin-right: 20px;
+    padding: 15px;
+    width: 80px;
+    &.active {
+      &> a,
+      &> span {
+        border-bottom: 3px solid $highlight;
+      }
+      ul {
+        display: block;
+        left: 120px;
+        position: relative;
+        bottom: 100px;
+      }
+    }
+    ul {
+      background-color: $bg-color;
+      display: none;
+      padding-top: 15px;
+      .nav-item {
+        float: none;
+        width: 100px;
+      }
+    }
+  }
+}
+#judge-global-banner-collapse {
+  background-color: $bg-color;
+  border: 1px black solid;
+  box-shadow: 0 1px 3px rgba(000,000,000,0.5), inset 0 0 1px rgba(255,255,255,0.7);
+  cursor: pointer;
+  display: inline-block;
+  margin: 0 0 5px 5px;
+  padding: 10px;
+  vertical-align: text-bottom;
+  span {
+    background-color: $highlight;
+    display: block;
+    border-radius: 1px;
+    height: 3px;
+    margin-bottom: 3px;
+    width: 16px;
+  }
+}
+@media (max-widith: 400px) {
+  #search-icon {
+    display: none;
+  }
+}
+@media (max-width: 300px) {
+  #judge-global-search {
+    display: none;
+  }
+}

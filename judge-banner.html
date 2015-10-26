@@ -1,22 +1,25 @@
-<link rel="stylesheet" type="text/css" href="http://assets.magicjudges.org/judge-banner/style.css?version=1" media="screen" />
+<link rel="stylesheet" media="(min-width: 1001px)" href="http://assets.magicjudges.org/judge-banner/css/screen.css">
+<link rel="stylesheet" media="(max-width: 1000px)" href="http://assets.magicjudges.org/judge-banner/css/mobile.css">
 
-<div id="judge-global-banner">
-  <img src="http://assets.magicjudges.org/judge-banner/magic-judge.png" id="judge-global-logo">
-
-  <span id="judge-navbar-toggler">
-    &#9776;
-  </span>
+<div id="judge-global-banner" class="collapsed">
+  <img id="judge-global-logo" src="http://assets.magicjudges.org/judge-banner/images/magic-judge.png">
+  <button id="judge-global-banner-collapse">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
 
   <ul id="judge-global-menu">
     <li class="nav-item">
       <a id="nav-apps" href="http://apps.magicjudges.org">Apps</a>
     </li>
     <li class="nav-item">
-      <a id="o-resources" href="http://blogs.magicjudges.org/o/">[O]fficial</a>
+      <span id="o-resources">[O]fficial</span>
       <ul>
-        <li class="sub-nav-item"><a href="http://blogs.magicjudges.org/o/judge-certification/">Certification</a></li>
-        <li class="sub-nav-item"><a href="http://blogs.magicjudges.org/o/judge-levels/">Levels</a></li>
-        <li class="sub-nav-item"><a href="http://blogs.magicjudges.org/o/rules-policy-documents/">Rules</a></li>
+        <li class="nav-item"><a href="http://blogs.magicjudges.org/o/">Resources</a></li>
+        <li class="nav-item"><a href="http://blogs.magicjudges.org/o/judge-certification/">Certification</a></li>
+        <li class="nav-item"><a href="http://blogs.magicjudges.org/o/judge-levels/">Levels</a></li>
+        <li class="nav-item"><a href="http://blogs.magicjudges.org/o/rules-policy-documents/">Rules</a></li>
       </ul>
     </li>
     <li class="nav-item">
@@ -25,35 +28,25 @@
     <li class="nav-item">
       <span id="nav-blogs">Blogs</span>
       <ul>
-        <li class="sub-nav-item"><a href="http://blogs.magicjudges.org">Judge Blog</a></li>
-        <li class="sub-nav-item"><a href="http://blogs.magicjudges.org/blog-portal/">Blog Portal</a></li>
+        <li class="nav-item"><a href="http://blogs.magicjudges.org">Judge Blog</a></li>
+        <li class="nav-item"><a href="http://blogs.magicjudges.org/blog-portal/">Blog Portal</a></li>
       </ul>
     </li>
     <li class="nav-item">
       <span id="nav-irc">Chat</span>
       <ul>
-        <li class="sub-nav-item"><a href="http://chat.magicjudges.org/mtgrules/">Rules Q&A</a></li>
-        <li class="sub-nav-item"><a href="http://chat.magicjudges.org/mtgjudge/">Judge Chats</a></li>
+        <li class="nav-item"><a href="http://chat.magicjudges.org/mtgrules/">Rules Q&#38;A</a></li>
+        <li class="nav-item"><a href="http://chat.magicjudges.org/mtgjudge/">Judge Chats</a></li>
       </ul>
     </li>
   </ul>
+
   <div id="judge-global-search">
     <div id="search-icon"></div>
-    <form id="search-form" method="get" action="http://blogs.magicjudges.org">
+    <form id="search-form" method="GET" action="http://blogs.magicjudges.org">
       <input id="search-input" name="s" type="text" placeholder="Search..." />
     </form>
   </div>
 </div>
 
-<script>
-  var searchForm = document.getElementById('search-form');
-  var searchInput = document.getElementById('search-input');
-
-  document.getElementById('search-icon').addEventListener('click', function() {
-    if (searchInput.value) {
-      searchForm.submit();
-    } else {
-      searchInput.focus();
-    }
-  });
-</script>
+<script src="http://assets.magicjudges.org/judge-banner/js/judge-banner.js"></script>
