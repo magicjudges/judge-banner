@@ -4,11 +4,15 @@
   font: 100% "Raleway", Helvetica, Arial, sans-serif;
   padding: 5px;
   position: relative;
-  z-index: 99999; }
+  z-index: 99999;
+  box-sizing: content-box; }
+  #judge-global-banner * {
+    box-sizing: content-box; }
   #judge-global-banner ul {
     list-style: none;
     margin: 0;
-    padding: 0; }
+    padding: 0;
+    vertical-align: bottom; }
   #judge-global-banner .nav-item {
     cursor: pointer; }
   #judge-global-banner a {
@@ -23,7 +27,7 @@
   display: inline-block;
   left: 170px;
   position: absolute;
-  top: 12px;
+  top: 15px;
   vertical-align: text-bottom; }
   #judge-global-search form {
     display: inline-block;
@@ -71,7 +75,6 @@
       position: relative;
       bottom: 100px; }
     #judge-global-menu .nav-item ul {
-      background-color: #363636;
       display: none;
       padding-top: 15px; }
       #judge-global-menu .nav-item ul .nav-item {
@@ -85,8 +88,7 @@
   cursor: pointer;
   display: inline-block;
   margin: 0 0 5px 5px;
-  padding: 10px;
-  vertical-align: text-bottom; }
+  padding: 10px; }
   #judge-global-banner-collapse span {
     background-color: darkorange;
     display: block;
@@ -95,7 +97,10 @@
     margin-bottom: 3px;
     width: 16px; }
 
-@media (max-width: 350px) {
+@media (max-widith: 400px) {
+  #search-icon {
+    display: none; } }
+@media (max-width: 300px) {
   #judge-global-search {
     display: none; } }
 
