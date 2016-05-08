@@ -30,7 +30,6 @@
       }
     }
     ul {
-      background-color: $bg-color;
       display: none;
       padding-top: 15px;
       .nav-item {
@@ -48,7 +47,6 @@
   display: inline-block;
   margin: 0 0 5px 5px;
   padding: 10px;
-  vertical-align: text-bottom;
   span {
     background-color: $highlight;
     display: block;
