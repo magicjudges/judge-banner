@@ -25,8 +25,6 @@ var hostname = window.location.hostname;
 var elem;
 if (hostname.indexOf('apps') != -1) {
   elem = document.getElementById('nav-apps');
-} else if (hostname.indexOf('wiki') != -1) {
-  elem = document.getElementById('nav-wiki');
 } else if (window.location.href.indexOf('/o/') != -1) {
   elem = document.getElementById('#o-resources');
 } else if (hostname.indexOf('blogs') != -1) {
