@@ -26,7 +26,9 @@ var elem;
 if (hostname.indexOf('apps') != -1) {
   elem = document.getElementById('nav-apps');
 } else if (window.location.href.indexOf('/o/') != -1) {
-  elem = document.getElementById('#o-resources');
+  elem = document.getElementById('o-resources');
+} else if (window.location.href.indexOf('/rules/') != -1) {
+  elem = document.getElementById('nav-rules');
 } else if (hostname.indexOf('blogs') != -1) {
   elem = document.getElementById('nav-blogs');
 } else if (hostname.indexOf('chat') != -1) {
