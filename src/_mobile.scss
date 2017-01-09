@@ -1,10 +1,7 @@
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 959px) {
   #judge-global-banner.collapsed {
     #judge-global-menu {
       display: none;
-    }
-    #judge-global-banner-collapse span {
-      background-color: white;
     }
   }
   #judge-global-menu {
@@ -45,15 +42,13 @@
     box-shadow: 0 1px 3px rgba(000, 000, 000, 0.5), inset 0 0 1px rgba(255, 255, 255, 0.7);
     cursor: pointer;
     display: inline-block;
-    margin: 0 0 5px 5px;
-    padding: 10px;
-    span {
-      background-color: $highlight;
-      display: block;
-      border-radius: 1px;
-      height: 3px;
-      margin-bottom: 3px;
-      width: 16px;
+    color: white;
+    padding: 5px;
+    font-size: 28px;
+    vertical-align: middle;
+    margin-left: 10px;
+    &:active {
+      color: $highlight;
     }
   }
 }

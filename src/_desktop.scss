@@ -1,29 +1,16 @@
-@media screen and (min-width: 1001px) {
+@media screen and (min-width: 960px) {
   #judge-global-menu {
-    display: inline-block;
     .nav-item {
-      color: white;
-      display: block;
-      float: left;
-      height: 20px;
-      margin-right: 20px;
-      padding: 15px;
-      width: 60px;
-      a {
-        padding-bottom: 21px;
-      }
+      a { padding-bottom: 18px; }
       ul {
-        background-color: $bg-color;
         display: none;
+        position: absolute;
+        margin-left: -25px;
         padding-top: 15px;
-        position: relative;
-        right: 40px;
+        background: $bg-color;
         .nav-item {
-          float: none;
-          width: 150px;
-          a {
-            padding-bottom: 16px;
-          }
+          line-height: 50px;
+          min-width: 150px;
         }
       }
       &:hover {
@@ -31,16 +18,13 @@
           border-bottom: 3px solid $highlight;
         }
         ul {
-          display: inline-block;
+          display: block;
         }
       }
     }
   }
   #judge-global-banner-collapse {
     display: none;
-  }
-  #judge-global-search {
-    left: 750px;
   }
 }
 

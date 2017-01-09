@@ -3,83 +3,69 @@
 #judge-global-banner {
   background-color: #363636;
   font: 100% "Raleway", Helvetica, Arial, sans-serif;
-  padding: 5px;
+  padding: 5px 10px;
   position: relative;
-  z-index: 99999; }
+  z-index: 99999;
+  display: flex;
+  align-items: center; }
   #judge-global-banner ul {
     list-style: none;
     margin: 0;
-    padding: 0;
-    vertical-align: bottom; }
-  #judge-global-banner .nav-item {
+    padding: 0; }
+  #judge-global-banner #judge-global-menu {
+    display: flex;
     cursor: pointer; }
+  #judge-global-banner .nav-item {
+    margin: 0 25px;
+    color: white;
+    min-width: 60px; }
+  #judge-global-banner .current {
+    color: darkorange;
+    font-weight: bold; }
+  #judge-global-banner #judge-global-search {
+    flex-grow: 1;
+    text-align: right; }
+    #judge-global-banner #judge-global-search .material-icons {
+      color: #929292;
+      font-size: 28px;
+      vertical-align: middle;
+      cursor: pointer; }
+    #judge-global-banner #judge-global-search:hover .material-icons {
+      color: darkorange; }
+    #judge-global-banner #judge-global-search input {
+      border: 1px black solid;
+      border-radius: 15px;
+      height: 30px;
+      padding: 5px 15px;
+      outline: none;
+      width: 150px; }
   #judge-global-banner a {
     color: white;
     font-weight: normal;
     text-decoration: none; }
-  #judge-global-banner .current {
-    color: darkorange;
-    font-weight: bold; }
 
-#judge-global-search {
-  display: inline-block;
-  left: 170px;
-  position: absolute;
-  top: 10px; }
-  #judge-global-search .material-icons {
-    color: #929292;
-    font-size: 28px;
-    vertical-align: middle;
-    cursor: pointer; }
-  #judge-global-search:hover .material-icons {
-    color: #FF8C00; }
-  #judge-global-search input {
-    border: 1px black solid;
-    border-radius: 15px;
-    height: 30px;
-    padding: 5px 15px;
-    outline: none;
-    width: 150px; }
-
-@media screen and (min-width: 1001px) {
-  #judge-global-menu {
-    display: inline-block; }
-    #judge-global-menu .nav-item {
-      color: white;
-      display: block;
-      float: left;
-      height: 20px;
-      margin-right: 20px;
-      padding: 15px;
-      width: 60px; }
-      #judge-global-menu .nav-item a {
-        padding-bottom: 21px; }
-      #judge-global-menu .nav-item ul {
-        background-color: #363636;
-        display: none;
-        padding-top: 15px;
-        position: relative;
-        right: 40px; }
-        #judge-global-menu .nav-item ul .nav-item {
-          float: none;
-          width: 150px; }
-          #judge-global-menu .nav-item ul .nav-item a {
-            padding-bottom: 16px; }
-      #judge-global-menu .nav-item:hover > a {
-        border-bottom: 3px solid darkorange; }
-      #judge-global-menu .nav-item:hover ul {
-        display: inline-block; }
+@media screen and (min-width: 960px) {
+  #judge-global-menu .nav-item a {
+    padding-bottom: 18px; }
+  #judge-global-menu .nav-item ul {
+    display: none;
+    position: absolute;
+    margin-left: -25px;
+    padding-top: 15px;
+    background: #363636; }
+    #judge-global-menu .nav-item ul .nav-item {
+      line-height: 50px;
+      min-width: 150px; }
+  #judge-global-menu .nav-item:hover > a {
+    border-bottom: 3px solid darkorange; }
+  #judge-global-menu .nav-item:hover ul {
+    display: block; }
 
   #judge-global-banner-collapse {
-    display: none; }
-
-  #judge-global-search {
-    left: 750px; } }
-@media screen and (max-width: 1000px) {
+    display: none; } }
+@media screen and (max-width: 959px) {
   #judge-global-banner.collapsed #judge-global-menu {
     display: none; }
-  #judge-global-banner.collapsed #judge-global-banner-collapse span {
-    background-color: white; }
 
   #judge-global-menu {
     background-color: #363636;
@@ -111,15 +97,13 @@
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5), inset 0 0 1px rgba(255, 255, 255, 0.7);
     cursor: pointer;
     display: inline-block;
-    margin: 0 0 5px 5px;
-    padding: 10px; }
-    #judge-global-banner-collapse span {
-      background-color: darkorange;
-      display: block;
-      border-radius: 1px;
-      height: 3px;
-      margin-bottom: 3px;
-      width: 16px; } }
+    color: white;
+    padding: 5px;
+    font-size: 28px;
+    vertical-align: middle;
+    margin-left: 10px; }
+    #judge-global-banner-collapse:active {
+      color: darkorange; } }
 @media screen and (max-width: 400px) {
   #search-icon {
     display: none; } }
