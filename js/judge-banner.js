@@ -41,7 +41,7 @@ if (elem) {
 
 /* search form focus logic */
 
-var searchForm = document.getElementById('search-form');
+var searchForm = document.getElementById('judge-global-search');
 var searchInput = document.getElementById('search-input');
 
 document.getElementById('search-icon').addEventListener('click', function() {
