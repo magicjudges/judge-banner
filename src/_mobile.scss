@@ -29,12 +29,21 @@
         transition: width 500ms;
         left: 135px;
         position: absolute;
-        bottom: 0;
+        top: 0;
         background: $bg-color;
         .nav-item {
           width: 100px;
           margin: 0;
         }
+      }
+
+      #nav-rules + ul {
+        top: -50px;
+      }
+
+      #nav-irc + ul {
+        top: auto;
+        bottom: 0;
       }
 
       &:after {
