@@ -3,23 +3,32 @@
     .nav-item {
       a { padding-bottom: 18px; }
       ul {
-        display: none;
         position: absolute;
-        margin-left: -25px;
+        margin-left: -45px;
         padding-top: 15px;
-        background: $bg-color;
+        max-height: 0;
+        overflow: hidden;
+        width: 150px;
+        transition: all 500ms;
+        padding-bottom: 3px;
         .nav-item {
-          line-height: 50px;
-          min-width: 150px;
+          line-height: 55px;
+          min-width: 100px;
+          background: $bg-color;
+          margin: 0;
+          width: 100%;
+          &:after {
+            top: 55px;
+          }
+          &:hover:after {
+            left: 20%;
+            right: 20%;
+          }
         }
       }
-      &:hover {
-        & > a {
-          border-bottom: 3px solid $highlight;
-        }
-        ul {
-          display: block;
-        }
+
+      &:hover ul {
+        max-height: 128px;
       }
     }
   }
