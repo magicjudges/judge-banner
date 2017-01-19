@@ -19,9 +19,10 @@
     box-shadow: 0 5px 10px rgba(0,0,0,0.3);
     transition: height 500ms;
     .nav-item {
-      height: 20px;
+      height: 50px;
       padding: 15px;
       width: 80px;
+      box-sizing: border-box;
 
       ul {
         overflow: hidden;
