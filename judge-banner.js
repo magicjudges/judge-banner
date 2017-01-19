@@ -1,4 +1,4 @@
-var url = "judge-banner.html";
+var url = "http://assets.magicjudges.org/judge-banner/judge-banner.html";
 var xhr = new XMLHttpRequest();
 
 xhr.addEventListener("load", function() {
