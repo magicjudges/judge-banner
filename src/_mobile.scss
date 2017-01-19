@@ -1,52 +1,82 @@
 @media screen and (max-width: 959px) {
   #judge-global-banner.collapsed {
     #judge-global-menu {
-      display: none;
+      height: 0;
+    }
+    #judge-global-banner-collapse {
+      color: white;
     }
   }
-  #judge-global-menu {
-    background-color: $bg-color;
+  #judge-global-banner #judge-global-menu {
+    background-color: #363636;
     display: block;
+    position: absolute;
+    top: 55px;
+    left: 0;
+    overflow:hidden;
+    width: 100%;
+    height: 250px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+    transition: height 500ms;
     .nav-item {
-      color: white;
-      display: block;
       height: 20px;
-      margin-right: 20px;
       padding: 15px;
       width: 80px;
-      &.active {
-        & > a,
-        & > span {
-          border-bottom: 3px solid $highlight;
-        }
-        ul {
-          display: block;
-          left: 120px;
-          position: relative;
-          bottom: 100px;
+
+      ul {
+        overflow: hidden;
+        width: 0;
+        transition: width 500ms;
+        left: 135px;
+        position: absolute;
+        top: 0;
+        background: $bg-color;
+        .nav-item {
+          width: 100px;
+          margin: 0;
         }
       }
-      ul {
-        display: none;
-        padding-top: 15px;
-        .nav-item {
-          float: none;
-          width: 100px;
+
+      #nav-irc + ul {
+        top: auto;
+        bottom: 0;
+      }
+
+      &:after {
+        top: 47px;
+      }
+      &:hover:after {
+        left: 20%;
+        right: 20%;
+      }
+      &.active {
+        &:after {
+          left: 20%;
+          right: 20%;
+        }
+        ul {
+          width: 130px;
         }
       }
     }
   }
+
   #judge-global-banner-collapse {
     background-color: $bg-color;
     border: 1px black solid;
     box-shadow: 0 1px 3px rgba(000, 000, 000, 0.5), inset 0 0 1px rgba(255, 255, 255, 0.7);
     cursor: pointer;
     display: inline-block;
-    color: white;
+    color: $highlight;
     padding: 5px;
     font-size: 28px;
     vertical-align: middle;
     margin-left: 10px;
+    -webkit-transition: color 500ms;
+    -moz-transition: color 500ms;
+    -ms-transition: color 500ms;
+    -o-transition: color 500ms;
+    transition: color 500ms;
     &:active {
       color: $highlight;
     }
@@ -59,7 +89,7 @@
   }
 }
 
-@media screen and (max-width: 300px) {
+@media screen and (max-width: 360px) {
   #judge-global-search {
     display: none;
   }

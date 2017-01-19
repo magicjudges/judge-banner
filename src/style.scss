@@ -14,6 +14,8 @@ $height: 45px;
   z-index: 99999;
   display: flex;
   align-items: center;
+  box-sizing: border-box;
+  height: 55px;
 
   ul {
     list-style: none;
@@ -30,6 +32,23 @@ $height: 45px;
     margin: 0 25px;
     color: white;
     min-width: 60px;
+    position: relative;
+    text-align: center;
+    &:after {
+      content: " ";
+      position: absolute;
+      top: 37px;
+      left: 50%;
+      right: 50%;
+      height: 3px;
+      background-color: $highlight;
+      transition: all 500ms;
+      z-index: 10;
+    }
+    &:hover:after {
+      left: 0;
+      right: 0;
+    }
   }
 
   .current {
@@ -45,6 +64,7 @@ $height: 45px;
       font-size: 28px;
       vertical-align: middle;
       cursor: pointer;
+      transition: color 500ms;
     }
     &:hover {
       .material-icons {
@@ -66,7 +86,6 @@ $height: 45px;
     font-weight: normal;
     text-decoration: none;
   }
-
 }
 
 @import "desktop";
