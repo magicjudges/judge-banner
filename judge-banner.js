@@ -8,7 +8,6 @@ xhr.addEventListener("load", function() {
 
   // move any link elements to head
   var links = html.getElementsByTagName("link");
-  console.log(links);
   for (var i = links.length - 1; i >= 0; i--) {
     document.getElementsByTagName("head")[0].appendChild(links[i]);
   }
