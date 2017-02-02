@@ -24,15 +24,30 @@ module.exports = function (grunt) {
         src: 'css/*.css'
       }
     },
+    inline: {
+      dist: {
+        src: 'judge-banner.html',
+        dest: 'judge-banner.dist.html'
+      }
+    },
     watch: {
       css: {
         files: '**/*.scss',
-        tasks: ['sass', 'postcss']
+        tasks: ['sass', 'postcss', 'inline']
+      },
+      js: {
+        files: '**/*.js',
+        tasks: ['inline']
+      },
+      html: {
+        files: 'judge-banner.html',
+        tasks: ['inline']
       }
     }
   });
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-postcss');
-  grunt.registerTask('default', ['watch']);
+  grunt.loadNpmTasks('grunt-inline');
+  grunt.registerTask('default', ['sass', 'postcss', 'inline', 'watch']);
 };
