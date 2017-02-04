@@ -1,4 +1,4 @@
-var url = "http://assets.magicjudges.org/judge-banner/judge-banner.html";
+var url = "http://assets.magicjudges.org/judge-banner/judge-banner.dist.html";
 var xhr = new XMLHttpRequest();
 
 xhr.addEventListener("load", function() {
@@ -6,15 +6,10 @@ xhr.addEventListener("load", function() {
   html.innerHTML = this.response;
   document.body.insertBefore(html, document.body.firstChild);
 
-  var scripts = html.getElementsByTagName("script");
-  for (var i = 0; i < scripts.length; i++) {
-    if (scripts[i].src != "") {
-      var tag = document.createElement("script");
-      tag.src = scripts[i].src;
-      document.getElementsByTagName("head")[0].appendChild(tag);
-    } else {
-      eval(scripts[i].innerHTML);
-    }
+  // move any link elements to head
+  var links = html.getElementsByTagName("link");
+  for (var i = links.length - 1; i >= 0; i--) {
+    document.getElementsByTagName("head")[0].appendChild(links[i]);
   }
 });
 
