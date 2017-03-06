@@ -4,7 +4,15 @@ var xhr = new XMLHttpRequest();
 xhr.addEventListener("load", function() {
   var html = document.createElement("div");
   html.innerHTML = this.response;
-  document.body.insertBefore(html, document.body.firstChild);
+  if(document.body) {
+    // body is there, add the banner!
+    document.body.insertBefore(html, document.body.firstChild);
+  } else {
+    // handle the case where the XHR Request comes from cache but the page isn't loaded yet
+    document.addEventListener('DOMContentLoaded', function() {
+      document.body.insertBefore(html, document.body.firstChild);
+    }, false);
+  }
 
   // move scripts to the head or execute them
   var scripts = html.getElementsByTagName("script");
