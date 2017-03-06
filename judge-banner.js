@@ -1,4 +1,4 @@
-var url = "http://assets.magicjudges.org/judge-banner/judge-banner.dist.html";
+var url = "https://assets.magicjudges.org/judge-banner/judge-banner.dist.html";
 var xhr = new XMLHttpRequest();
 
 xhr.addEventListener("load", function() {
